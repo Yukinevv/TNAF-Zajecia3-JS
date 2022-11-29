@@ -1,14 +1,14 @@
-const licznik = document.querySelector('#licznik');
+const counter = document.querySelector('#counter');
 
-let counter = 0;
+let count = 0;
 
 const incrementButton = document.querySelector('button.increment');
 
 incrementButton.addEventListener('click', e => {
     e.preventDefault();
 
-    counter++;
-    licznik.innerHTML = counter;
+    count++;
+    counter.innerHTML = count;
 });
 
 const colorRedButton = document.querySelector('button.change-to-color-red');
@@ -16,13 +16,15 @@ const colorRedButton = document.querySelector('button.change-to-color-red');
 colorRedButton.addEventListener('click', e => {
     e.preventDefault();
 
-    /*if (licznik.style.color !== "red")
-        licznik.style.color = "red";
+    /*if (counter.style.color !== "red")
+        counter.style.color = "red";
     else
-        licznik.style.color = "black";*/
+        counter.style.color = "black";*/
 
-    if (!licznik.classList.contains('color-red'))
-        licznik.classList.add('color-red');
+    /*if (!counter.classList.contains('color-red'))
+        counter.classList.add('color-red');
     else
-        licznik.classList.remove('color-red');
+        counter.classList.remove('color-red');*/
+
+    counter.classList.toggle('color-red');
 });
