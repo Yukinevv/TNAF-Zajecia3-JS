@@ -8,3 +8,4 @@ const fibonacci = n => {
 };
 
 console.log(fibonacci(9));
+console.log(fibonacci(5));
